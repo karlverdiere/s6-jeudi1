@@ -1,6 +1,6 @@
 class SayFilm
   Tmdb::Api.key(Rails.application.credentials.dig(:api_key))
-  def perform(movie_name)
+  def perform
 
     @hash = Hash.new
     @hash1 = Hash.new
@@ -17,8 +17,7 @@ class SayFilm
      @hash1
     backdrop = movie.backdrop_path
       @hash_de_compression[movie.id] = {"title": title, "date": date, "director": @hash1, "backdrop": backdrop}
-      if movie.id == 20
-        return @hash_de_compression
+
     end
 
 
