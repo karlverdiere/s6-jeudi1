@@ -1,0 +1,8 @@
+<p><% @value.each do |id, hash| %></p>
+<p>==========================================================================</p>
+<p>|                         le titre :       <%= hash[:title]%>                       |</p>
+<p>==========================================================================</p>
+  <p>la date : <%= hash[:date]%></p>
+<p>el director :   <%= hash[:director]%></p>
+  <p>le backdrop(image):  http://image.tmdb.org/t/p/w342/<%= hash[:backdrop]%></p>
+    <%end%>
